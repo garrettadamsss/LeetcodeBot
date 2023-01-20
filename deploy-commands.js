@@ -1,4 +1,6 @@
-const { REST, Routes} = require('@discordjs/rest');
+//run this file in order to register commands
+
+const { REST, Routes} = require('discord.js');
 const { clientId, guildId, token } = require('./config.json');
 const fs = require('node:fs');
 

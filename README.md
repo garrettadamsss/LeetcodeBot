@@ -6,3 +6,5 @@ The daily leetcode problem will output a random problem daily and allow users to
 
 The leetcode bot was created using Node.js and discord.js module. The bot is in the process of being hosted on an EC2 instance on AWS. 
 
+To setup this project:
+  1. 

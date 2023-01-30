@@ -8,8 +8,13 @@ module.exports = {
         .setDescription('Returns random problem'),
     async execute(interaction) {
         await interaction.deferReply();
-        await wait(5000);
-        await interaction.editReply(webscraper());
+        // await wait(5000);
+
+        webscraper((problemLink) => {
+           interaction.editReply(problemLink);
+        })
+        
+        // await interaction.editReply(webscraper());
 
         
     },

@@ -1,4 +1,4 @@
-module.exports = function WebScraper(){
+module.exports = function WebScraper(callback){
 //jquery implementation for nodejs that makes it easy to view dom elements
 const cheerio = require('cheerio');
 //controlls a headless browser which is needed for scraping dynamic websites
@@ -29,7 +29,7 @@ puppeteer
     //choose random random problem
     let problemLink = problems[randomNum];
     //combine problem path to create link
-    return "https://leetcode.com/".concat(problemLink);
+    callback("https://leetcode.com".concat(problemLink));
 })
 .catch(console.error);
 };

@@ -13,8 +13,6 @@ module.exports = {
         webscraper((problemLink) => {
            interaction.editReply(problemLink);
         })
-        
-        // await interaction.editReply(webscraper());
 
         
     },

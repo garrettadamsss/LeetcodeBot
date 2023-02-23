@@ -7,13 +7,7 @@ module.exports = {
         .setName('problem')
         .setDescription('Returns random problem'),
     async execute(interaction) {
-        await interaction.deferReply();
-        // await wait(5000);
-
-        webscraper((problemLink) => {
-           interaction.editReply(problemLink);
-        })
-
+        await interaction.reply();
         
     },
 };

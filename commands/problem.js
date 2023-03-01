@@ -4,10 +4,10 @@ const sqlite3 = require('sqlite3').verbose();
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('problem')
-        .setDescription('Returns a problem of the desired difficulty(Easy, Medium, Hard)')
+        .setDescription('Returns a problem of the desired difficulty')
         .addStringOption(option => 
             option.setName('difficulty')
-                .setDescription('Specify the difficulty: Easy, Medium, Hard')
+                .setDescription('Specify the difficulty')
                 .setRequired(true)
                 .addChoices(
                     {name: 'Easy', value: 'Easy'},
@@ -39,8 +39,7 @@ module.exports = {
             //get random line number for randomization
             const randomIndex = Math.floor(Math.random() * rows.length);
             await interaction.reply(rows[randomIndex].problemLink);
-          });
-        
+        });
           
         //close the database
         db.close((err) => {

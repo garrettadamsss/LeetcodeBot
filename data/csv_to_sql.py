@@ -1,29 +1,5 @@
 import sqlite3
 import pandas as pd
-
-
-# # Connect to SQLite database
-# conn = sqlite3.connect('./data/problems_database.db')
-
-
-# cursor = conn.cursor()
-
-# cursor.execute('''CREATE TABLE problems (id INTEGER PRIMARY KEY AUTOINCREMENT, problemLink TEXT NOT NULL, difficulty TEXT NOT NULL)''')
-
-# # Load CSV data into Pandas DataFrame
-# problems = pd.read_csv('data/free_problems_list.csv')
-
-# problems.to_sql('problems', conn, if_exists='append', index=False)
-
-# rows = cursor.execute('''SELECT * FROM problems''').fetchall()
-# for r in rows : 
-#     print(r)
-
-# conn.close()
-
-# Import required libraries
-import sqlite3
-import pandas as pd
   
 # Connect to SQLite database
 conn = sqlite3.connect('./data/bot_database.db')

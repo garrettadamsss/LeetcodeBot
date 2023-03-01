@@ -46,7 +46,7 @@ async function questionCollector(){
             let svgcount = await $(this).find('svg').length;
             if(svgcount <= 2){
                 try {
-                    fs.appendFileSync('free_problems_list.csv', "https://leetcode.com".concat(problemLink) + ', ' + difficulty + '\n');
+                    fs.appendFileSync('./data/free_problems_list.csv', "https://leetcode.com".concat(problemLink) + ',' + difficulty + '\n');
                 } catch(err){
                     console.log(err);
                 }
@@ -55,30 +55,6 @@ async function questionCollector(){
     }; 
 }
 
-//go through each problem in csv and verify that the problem is not a premium problem
-async function questionVerifier(){
-    const readline = require("readline");
-    const stream = fs.createReadStream('problems_list.csv');
-    const reader = readline.createInterface({input : stream});
-
-    
-    for await (const line of reader){
-        let arrayOfElements = await WebScraper(line, '.flex max-w-[400px] flex-col items-center');
-        if(arrayOfElements.length == 0){
-            try {
-                console.log(`${line} is a free problem`);
-                fs.appendFileSync('free_problems_list.csv', line + '\n');
-            } catch(err) {
-                console.log(err);
-            }
-        } else {
-            console.log(`${line} is not a free problem`);
-        }
-        
-    }
-    
-}
 
 
 questionCollector();
-

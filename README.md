@@ -6,7 +6,7 @@ Coding problems are one of the main stressors of every person entering the tech 
 2. (Work in progress) Automatically send out daily leetcode challenge problems and keep a score system. 
 
 
-##Technologies##
+## Technologies ##
 Webscraper built from cheerio and puppeteer is used to scrape for all free leetcode problems and store them in csv. 
 
 The leetcode bot was created using Node.js and discord.js module. The bot is currently hosted on an EC2 instance.

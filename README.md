@@ -1,10 +1,13 @@
-# LeetcodeBot
+# LeetcodeBot #
 
-The leetcode bot is a discord bot to be used to request random leetcode problems and send daily leetcode challenge problems. The goal of this project is to provide a more fun method of practicing leetcode problems. 
+Coding problems are one of the main stressors of every person entering the tech world. This project was designed to help students practice coding challenges and aimed for discords with computer science students. The discord bot contains two main functions: 
 
+1. Request random Leetcode problems
+2. (Work in progress) Automatically send out daily leetcode challenge problems and keep a score system. 
+
+
+##Technologies##
 Webscraper built from cheerio and puppeteer is used to scrape for all free leetcode problems and store them in csv. 
-
-The daily leetcode problem will output a random problem daily and allow users to submit their score. At the end of every day the scores will be counted and anouncement will be made to the winner(s). 
 
 The leetcode bot was created using Node.js and discord.js module. The bot is currently hosted on an EC2 instance.
 

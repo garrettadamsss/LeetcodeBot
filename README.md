@@ -7,7 +7,9 @@ Coding problems are one of the main stressors of every person entering the tech 
 
 
 ## Technologies ##
-Webscraper built from cheerio and puppeteer is used to scrape for all free leetcode problems and store them in csv. 
+Webscraper built from cheerio and puppeteer is used to scrape for all free leetcode problems.
+
+SQLite used as a database for all of the problem data. 
 
 The leetcode bot was created using Node.js and discord.js module. The bot is currently hosted on an EC2 instance.
 
